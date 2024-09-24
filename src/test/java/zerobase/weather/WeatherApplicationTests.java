@@ -29,7 +29,7 @@ class WeatherApplicationTests {
         // given
         // when
         // then
-        assertTrue(1 == 1);
+        assertEquals(1, 1);
     }
 
 }
