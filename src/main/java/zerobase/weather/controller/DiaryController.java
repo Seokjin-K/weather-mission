@@ -27,8 +27,9 @@ public class DiaryController {
     }
 
     @GetMapping("/read/diary")
-    public List<Diary> readDiary(@RequestParam
-                                 @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
+    public List<Diary> readDiary(
+            @RequestParam
+            @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date
     ) {
         return diaryService.readDiary(date);
     }
