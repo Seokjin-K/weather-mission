@@ -6,6 +6,5 @@ public class OpenWeatherApiTest {
     @Test
     public void mo(){
         //given()
-
     }
 }
