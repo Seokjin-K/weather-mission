@@ -100,12 +100,14 @@ public class DiaryService {
         return diaryRepository.findAllByDateBetween(startDate, endDate);
     }
 
+    @Transactional
     public void updateDiary(LocalDate date, String text) {
         Diary firstByDate = diaryRepository.getFirstByDate(date);
         firstByDate.setText(text);
         diaryRepository.save(firstByDate);
     }
 
+    @Transactional
     public void deleteDiary(LocalDate date) {
         diaryRepository.deleteAllByDate(date);
     }
